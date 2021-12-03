@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" fx:id="updatesessionpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="resourcemanagementapp.sessions.UpdateSessionController">
+   <children>
+      <Circle fill="#aeaeae" layoutX="57.0" layoutY="60.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fill="#6b6a6a" layoutX="89.0" layoutY="60.0" radius="12.0" stroke="#141414" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fill="#aeaeae" layoutX="120.0" layoutY="60.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fill="#cdcdcd" layoutX="1078.0" layoutY="39.0" opacity="0.34" radius="108.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fill="#cdcdcd" layoutX="1152.0" layoutY="134.0" opacity="0.47" radius="74.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fill="#cdcdcd" layoutX="77.0" layoutY="568.0" opacity="0.34" radius="108.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fill="#cdcdcd" layoutX="132.0" layoutY="662.0" opacity="0.47" radius="74.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Label layoutX="990.0" layoutY="28.0" text="Resource" textFill="#808080">
+         <font>
+            <Font name="Calibri Bold" size="35.0" />
+         </font>
+      </Label>
+      <Label layoutX="990.0" layoutY="60.0" text="Management" textFill="#808080">
+         <font>
+            <Font name="Calibri Bold" size="35.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="86.0" text="Update Session" textFill="#6f6e6e">
+         <font>
+            <Font name="Arial Bold" size="40.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="196.0" layoutY="147.0" prefHeight="515.0" prefWidth="851.0" style="-fx-background-color: white; -fx-background-radius: 40; -fx-border-color: #6f6e6e; -fx-border-width: 3; -fx-border-radius: 40;">
+         <effect>
+            <DropShadow color="#a1a1a1" height="36.55" radius="16.22" width="30.33" />
+         </effect>
+         <children>
+            <JFXTabPane fx:id="tabpane" layoutX="5.0" layoutY="2.0" prefHeight="467.0" prefWidth="851.0" stylesheets="@../stylesheet/tab.css" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-2.0">
+               <tabs>
+                  <Tab fx:id="selectLecturer" style="-fx-font-size: 25px;" text="Select Lecturer and Tag">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="79.0" layoutY="47.0" text="Step 1" textFill="#6f6e6e">
+                                 <font>
+                                    <Font name="Arial Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <JFXComboBox fx:id="cmbSelectLecturer" focusColor="#515151" labelFloat="true" layoutX="79.0" layoutY="118.0" onAction="#displayLecturerOnLbl" prefHeight="31.0" prefWidth="310.0" promptText="Select Lecturer(s)" unFocusColor="#757575" />
+                              <JFXComboBox fx:id="cmbSelectTag" focusColor="#515151" labelFloat="true" layoutX="79.0" layoutY="199.0" onAction="#loadCmbGroup" onMouseClicked="#loadCmbGroup" prefHeight="31.0" prefWidth="310.0" promptText="Select Tag" unFocusColor="#757575" />
+                              <AnchorPane layoutX="468.0" layoutY="131.0" prefHeight="122.0" prefWidth="308.0" style="-fx-background-color: white; -fx-border-color: #757575; -fx-border-radius: 20; -fx-border-width: 2;">
+                                 <children>
+                                    <Label layoutX="22.0" layoutY="31.0" text="1.">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="22.0" layoutY="66.0" text="2.">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblLectuer1" layoutX="43.0" layoutY="31.0" />
+                                    <Label fx:id="lblLectuer2" layoutX="43.0" layoutY="66.0" />
+                                 </children>
+                              </AnchorPane>
+                              <Label layoutX="480.0" layoutY="102.0" text="Selected Lecturers" />
+                              <JFXButton buttonType="RAISED" layoutX="495.0" layoutY="293.0" onAction="#nextBtnPressed" prefHeight="63.0" prefWidth="269.0" style="-fx-background-color: linear-gradient(to right, #009999 0%, #33cccc 100%); -fx-background-radius: 40;" text="Next" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="19.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow color="#949494" height="27.22" radius="13.11" width="27.22" />
+                                 </effect>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" layoutX="100.0" layoutY="293.0" onAction="#clearBtnPressed" prefHeight="63.0" prefWidth="269.0" style="-fx-background-color: linear-gradient(to right, #ff3300 0%, #993300 100%); -fx-background-radius: 40;" text="Clear" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="19.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow color="#949494" height="27.22" radius="13.11" width="27.22" />
+                                 </effect>
+                              </JFXButton>
+                              <Label fx:id="lblError" layoutX="173.0" layoutY="47.0" textFill="#b21515">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="selectGroup" text="Select Group and Subject">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="845.0">
+                           <children>
+                              <Label layoutX="80.0" layoutY="57.0" text="Step 2" textFill="#6f6e6e">
+                                 <font>
+                                    <Font name="Arial Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <JFXComboBox fx:id="cmbSelectGroup" focusColor="#3c3c3c" labelFloat="true" layoutX="80.0" layoutY="125.0" prefHeight="31.0" prefWidth="316.0" promptText="Select Group" unFocusColor="#8a8a8a" />
+                              <JFXComboBox fx:id="cmbSelectSubject" focusColor="#3c3c3c" labelFloat="true" layoutX="80.0" layoutY="208.0" prefHeight="31.0" prefWidth="316.0" promptText="Select Subject" unFocusColor="#8a8a8a" />
+                              <JFXTextField fx:id="txtNoOfStudents" focusColor="#4a4a4a" labelFloat="true" layoutX="478.0" layoutY="125.0" prefHeight="31.0" prefWidth="293.0" promptText="No of Students" />
+                              <JFXTextField fx:id="txtDuration" focusColor="#4a4a4a" labelFloat="true" layoutX="478.0" layoutY="208.0" prefHeight="31.0" prefWidth="196.0" promptText="Duration" />
+                              <Label layoutX="686.0" layoutY="223.0" text="Hours" textFill="#6f6e6e">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <JFXButton buttonType="RAISED" layoutX="70.0" layoutY="300.0" onAction="#backTabBtnPressed" prefHeight="53.0" prefWidth="216.0" style="-fx-background-color: linear-gradient(to bottom, #ff9933 39%, #ff9900 100%); -fx-background-radius: 40;" text="Back" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="19.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow color="#949494" height="27.22" radius="13.11" width="27.22" />
+                                 </effect>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" layoutX="320.0" layoutY="300.0" onAction="#clearBtn2Pressed" prefHeight="53.0" prefWidth="216.0" style="-fx-background-color: linear-gradient(to right, #ff3300 0%, #993300 100%); -fx-background-radius: 40;" text="Clear" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="19.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow color="#949494" height="27.22" radius="13.11" width="27.22" />
+                                 </effect>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" layoutX="576.0" layoutY="300.0" onAction="#submitBtnPressed" prefHeight="54.0" prefWidth="226.0" style="-fx-background-color: linear-gradient(to right, #009999 0%, #33cccc 100%); -fx-background-radius: 40;" text="Submit" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="19.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow color="#949494" height="27.22" radius="13.11" width="27.22" />
+                                 </effect>
+                              </JFXButton>
+                              <Label fx:id="lblError2" layoutX="180.0" layoutY="55.0" textFill="#b21515">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </JFXTabPane>
+         </children>
+      </AnchorPane>
+      <Label layoutX="778.0" layoutY="96.0" style="-fx-background-color: green;" text=" Session ID : " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblSessionID" layoutX="892.0" layoutY="96.0" text="10">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

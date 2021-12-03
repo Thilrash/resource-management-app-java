@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="managelocationspane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1300.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="resourcemanagementapp.locations.ManageLocationsController">
+   <children>
+      <JFXButton layoutX="87.0" layoutY="49.0" onAction="#backBtnPressed" prefHeight="26.0" prefWidth="148.0" text="&lt; Back To Dashbord" textFill="#6e6e6e">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+         <effect>
+            <DropShadow color="#949494" height="27.22" radius="13.11" width="27.22" />
+         </effect>
+      </JFXButton>
+      <Circle fill="#aeaeae" layoutX="107.0" layoutY="95.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fill="#6b6a6a" layoutX="140.0" layoutY="95.0" radius="12.0" stroke="#141414" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fill="#aeaeae" layoutX="173.0" layoutY="95.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Label layoutX="95.0" layoutY="115.0" text="Manage Locations" textFill="#6f6e6e">
+         <font>
+            <Font name="Arial Bold" size="40.0" />
+         </font>
+      </Label>
+      <Circle fill="#cdcdcd" layoutX="1178.0" layoutY="75.0" opacity="0.34" radius="108.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.rightAnchor="14.0" />
+      <Circle fill="#cdcdcd" layoutX="1273.0" layoutY="169.0" opacity="0.47" radius="74.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.rightAnchor="-47.0" />
+      <Label layoutX="1081.0" layoutY="42.0" text="Resource" textFill="#808080" AnchorPane.rightAnchor="85.0">
+         <font>
+            <Font name="Calibri Bold" size="35.0" />
+         </font>
+      </Label>
+      <Label layoutX="1080.0" layoutY="75.0" text="Management" textFill="#808080" AnchorPane.rightAnchor="24.0">
+         <font>
+            <Font name="Calibri Bold" size="35.0" />
+         </font>
+      </Label>
+      <Circle fill="#cdcdcd" layoutX="119.0" layoutY="875.0" opacity="0.47" radius="74.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fill="#cdcdcd" layoutX="46.0" layoutY="775.0" opacity="0.34" radius="108.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <AnchorPane layoutX="437.0" layoutY="176.0" prefHeight="635.0" prefWidth="849.0" style="-fx-background-color: white; -fx-background-radius: 40; -fx-border-color: #6f6e6e; -fx-border-width: 3; -fx-border-radius: 40;" AnchorPane.bottomAnchor="89.0" AnchorPane.leftAnchor="437.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="176.0">
+         <children>
+            <TableView fx:id="LocationTable" layoutX="26.0" layoutY="21.0" onKeyPressed="#showOnClick" onMouseClicked="#showOnClick" prefHeight="583.0" prefWidth="806.0" stylesheets="@../stylesheet/table.css" AnchorPane.bottomAnchor="49.0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="18.0">
+               <columns>
+                  <TableColumn fx:id="ColoumnLocationID" prefWidth="90.0" style="-fx-alignment: center;" text="ID" />
+                  <TableColumn fx:id="ColoumnBuilding" prefWidth="85.0" text="BUILDING" />
+                  <TableColumn fx:id="ColoumnRoom" prefWidth="93.0" style="-fx-alignment: center;" text="ROOM" />
+                  <TableColumn fx:id="ColoumnRoomType" minWidth="2.0" prefWidth="132.0" text="ROOM TYPE" />
+                  <TableColumn fx:id="ColoumnCapacity" minWidth="2.0" prefWidth="166.0" style="-fx-alignment: center;" text="CAPACITY" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+         <effect>
+            <DropShadow color="#a1a1a1" height="36.55" radius="16.22" width="30.33" />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="24.0" layoutY="178.0" prefHeight="705.0" prefWidth="394.0" style="-fx-background-color: white; -fx-background-radius: 40; -fx-border-color: #6f6e6e; -fx-border-width: 3; -fx-border-radius: 40;" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="24.0" AnchorPane.topAnchor="178.0">
+         <effect>
+            <DropShadow color="#cdcdcd" height="48.21" radius="27.1025" spread="0.6" width="62.2" />
+         </effect>
+         <children>
+            <JFXTextField fx:id="txtBuildingName" focusColor="#8a8a8a" labelFloat="true" layoutX="47.0" layoutY="82.0" prefHeight="31.0" prefWidth="300.0" promptText="Building Name" />
+            <JFXTextField fx:id="txtRoomName" focusColor="#8a8a8a" labelFloat="true" layoutX="47.0" layoutY="174.0" prefHeight="31.0" prefWidth="300.0" promptText="Room Name" />
+            <Label layoutX="47.0" layoutY="266.0" text="Room Type" />
+            <JFXRadioButton fx:id="rbtnLectureHall" layoutX="73.0" layoutY="308.0" style="-jfx-selected-color: #141414;" text="Lecture Hall">
+               <toggleGroup>
+                  <ToggleGroup fx:id="roomType" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="rbtnLaboratory" layoutX="73.0" layoutY="347.0" style="-jfx-selected-color: #141414;" text="Laboratory" toggleGroup="$roomType" />
+            <JFXTextField fx:id="txtCapacity" focusColor="#8a8a8a" labelFloat="true" layoutX="47.0" layoutY="432.0" prefHeight="31.0" prefWidth="300.0" promptText="Capacity" />
+            <JFXButton layoutX="73.0" layoutY="596.0" onAction="#clearBtnPressed" prefHeight="54.0" prefWidth="248.0" style="-fx-border-color: #3b0da7; -fx-border-width: 3px; -fx-border-radius: 10;" text="Clear" textFill="#3b0da7">
+               <font>
+                  <Font name="Arial Bold" size="19.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#949494" height="27.22" radius="13.11" width="27.22" />
+               </effect>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <JFXButton layoutX="502.0" layoutY="831.0" onAction="#addBtnPressed" prefHeight="54.0" prefWidth="196.0" style="-fx-border-color: #199308; -fx-border-width: 3px; -fx-border-radius: 10;" text="Add" textFill="#199308" AnchorPane.bottomAnchor="15.0">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font>
+         <effect>
+            <DropShadow color="#949494" height="27.22" radius="13.11" width="27.22" />
+         </effect>
+      </JFXButton>
+      <JFXButton layoutX="757.0" layoutY="831.0" onAction="#deleteBtnPressed" prefHeight="54.0" prefWidth="196.0" style="-fx-border-color: #cc0101; -fx-border-width: 3px; -fx-border-radius: 10;" text="Delete" textFill="#cc0101" AnchorPane.bottomAnchor="15.0">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font>
+         <effect>
+            <DropShadow color="#949494" height="27.22" radius="13.11" width="27.22" />
+         </effect>
+      </JFXButton>
+      <JFXButton layoutX="1018.0" layoutY="831.0" onAction="#updateBtnPressed" prefHeight="54.0" prefWidth="196.0" style="-fx-border-color: #0458cc; -fx-border-width: 3px; -fx-border-radius: 10;" text="Update" textFill="#0458cc" AnchorPane.bottomAnchor="15.0">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font>
+         <effect>
+            <DropShadow color="#949494" height="27.22" radius="13.11" width="27.22" />
+         </effect>
+      </JFXButton>
+      <Label fx:id="errLbl" layoutX="478.0" layoutY="128.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

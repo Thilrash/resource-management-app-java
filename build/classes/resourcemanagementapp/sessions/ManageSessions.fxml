@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="managesessionspane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1300.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="resourcemanagementapp.sessions.ManageSessionsController">
+   <children>
+      <Circle fill="#cdcdcd" layoutX="1178.0" layoutY="48.0" opacity="0.34" radius="108.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.rightAnchor="14.0" />
+      <Circle fill="#cdcdcd" layoutX="1252.0" layoutY="149.0" opacity="0.47" radius="74.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.rightAnchor="-26.0" />
+      <Label layoutX="1093.0" layoutY="28.0" text="Resource" textFill="#808080" AnchorPane.rightAnchor="73.0">
+         <font>
+            <Font name="Calibri Bold" size="35.0" />
+         </font>
+      </Label>
+      <Label layoutX="1093.0" layoutY="63.0" text="Management" textFill="#808080" AnchorPane.rightAnchor="11.0">
+         <font>
+            <Font name="Calibri Bold" size="35.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="97.0" layoutY="59.0" onAction="#backBtnPressed" prefHeight="26.0" prefWidth="148.0" text="&lt; Back To Dashbord" textFill="#6e6e6e">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+         <effect>
+            <DropShadow color="#949494" height="27.22" radius="13.11" width="27.22" />
+         </effect>
+      </JFXButton>
+      <Circle fill="#aeaeae" layoutX="117.0" layoutY="105.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fill="#6b6a6a" layoutX="150.0" layoutY="105.0" radius="12.0" stroke="#141414" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fill="#aeaeae" layoutX="183.0" layoutY="105.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Label layoutX="105.0" layoutY="125.0" text="Manage Sessions" textFill="#6f6e6e">
+         <font>
+            <Font name="Arial Bold" size="40.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="41.0" layoutY="277.0" prefHeight="564.0" prefWidth="722.0" style="-fx-background-color: white; -fx-background-radius: 40; -fx-border-color: #6f6e6e; -fx-border-width: 3; -fx-border-radius: 40;" AnchorPane.bottomAnchor="59.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="537.0" AnchorPane.topAnchor="277.0">
+         <children>
+            <TableView fx:id="SessionTable" layoutX="29.0" layoutY="24.0" prefHeight="582.0" prefWidth="860.0" stylesheets="@../stylesheet/table.css" AnchorPane.bottomAnchor="32.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="21.0">
+               <columns>
+                  <TableColumn fx:id="ColoumnSessionID" prefWidth="90.0" style="-fx-alignment: center;" text="ID" />
+                  <TableColumn fx:id="ColoumnLecturer1" prefWidth="85.0" text="LECTURER 1" />
+                  <TableColumn fx:id="ColoumnLecturer2" prefWidth="93.0" text="LECTURER 2" />
+                  <TableColumn fx:id="ColoumnSubjectCode" minWidth="2.0" prefWidth="132.0" text="SUBJECT CODE" />
+                  <TableColumn fx:id="ColoumnSubjectName" minWidth="2.0" prefWidth="166.0" style="-fx-alignment: center;" text="SUBJECT NAME" />
+                  <TableColumn fx:id="ColoumnGroupID" minWidth="2.0" prefWidth="166.0" style="-fx-alignment: center;" text="GROUP ID" />
+                  <TableColumn fx:id="ColoumnTag" minWidth="2.0" prefWidth="166.0" style="-fx-alignment: center;" text="TAG" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+         <effect>
+            <DropShadow color="#a1a1a1" height="36.55" radius="16.22" width="30.33" />
+         </effect>
+      </AnchorPane>
+      <JFXButton buttonType="RAISED" layoutX="909.0" layoutY="437.0" onAction="#addSessionBtnPressed" prefHeight="70.0" prefWidth="269.0" style="-fx-background-color: linear-gradient(to bottom, #ff9933 39%, #ff9900 100%); -fx-background-radius: 40;" text="Add Session" textFill="WHITE" AnchorPane.rightAnchor="122.0">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font>
+         <effect>
+            <DropShadow color="#949494" height="27.22" radius="13.11" width="27.22" />
+         </effect>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="909.0" layoutY="560.0" onAction="#viewBtnPressed" prefHeight="63.0" prefWidth="269.0" style="-fx-background-color: linear-gradient(to right, #0066ff 0%, #66ccff 100%); -fx-background-radius: 40;" text="View" textFill="WHITE" AnchorPane.rightAnchor="122.0">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font>
+         <effect>
+            <DropShadow color="#949494" height="27.22" radius="13.11" width="27.22" />
+         </effect>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="909.0" layoutY="641.0" onAction="#updateBtnPressed" prefHeight="63.0" prefWidth="269.0" style="-fx-background-color: linear-gradient(to right, #000099 0%, #0033cc 100%); -fx-background-radius: 40;" text="Update" textFill="WHITE" AnchorPane.rightAnchor="122.0">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font>
+         <effect>
+            <DropShadow color="#949494" height="27.22" radius="13.11" width="27.22" />
+         </effect>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="909.0" layoutY="716.0" onAction="#deleteBtnPressed" prefHeight="63.0" prefWidth="269.0" style="-fx-background-color: linear-gradient(to right, #ff3300 0%, #993300 100%); -fx-background-radius: 40;" text="Delete" textFill="WHITE" AnchorPane.rightAnchor="122.0">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font>
+         <effect>
+            <DropShadow color="#949494" height="27.22" radius="13.11" width="27.22" />
+         </effect>
+      </JFXButton>
+      <JFXTextField fx:id="txtSearch" focusColor="#141414" labelFloat="true" layoutX="99.0" layoutY="223.0" prefHeight="31.0" prefWidth="349.0" promptText="Search" />
+      <JFXComboBox fx:id="comboFilter" focusColor="BLACK" layoutX="468.0" layoutY="223.0" prefHeight="31.0" prefWidth="216.0" promptText="Search Type" />
+      <JFXButton fx:id="btnSearch" layoutX="705.0" layoutY="232.0" onAction="#searchBtnPressed" prefHeight="26.0" prefWidth="148.0" style="-fx-border-color: #0eb8b0; -fx-border-width: 2; -fx-border-radius: 40;" text="Search" textFill="#0eb8b0">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow color="#949494" height="27.22" radius="13.11" width="27.22" />
+         </effect>
+      </JFXButton>
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="862.0" layoutY="227.0" onAction="#refreshBtnPressed" prefHeight="41.0" prefWidth="38.0" style="-fx-border-color: #0eb8b0; -fx-border-width: 2; -fx-border-radius: 100;" text="Button" textFill="#0eb8b0">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow color="#949494" height="27.22" radius="13.11" width="27.22" />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="23.0">
+               <image>
+                  <Image url="@../images/refresh.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="72.0" layoutY="229.0">
+         <image>
+            <Image url="@../images/search.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblError" layoutX="468.0" layoutY="143.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

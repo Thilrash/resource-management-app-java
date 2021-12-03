@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="ResourceManagementApp.jnlp">
+  <information>
+    <title>ResourceManagementApp</title>
+    <vendor>thilr_88qp6ap</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="ResourceManagementApp.jar" size="143488" download="eager" />
+    <jar href="lib\jdbc.jar" size="474964" download="eager" />
+    <jar href="lib\jfoenix-8.0.7.jar" size="2631271" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.44-bin.jar" size="999635" download="eager" />
+    <jar href="lib\mysql-connector-java-8.0.23.jar" size="2415211" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="ResourceManagementApp" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="resourcemanagementapp.ResourceManagementApp"  name="ResourceManagementApp" />
+  <update check="always"/>
+</jnlp>

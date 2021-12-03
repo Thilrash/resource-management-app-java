@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" fx:id="addtagpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="resourcemanagementapp.tags.AddTagController">
+   <children>
+      <JFXButton layoutX="42.0" layoutY="33.0" onAction="#backBtnPressed" prefHeight="26.0" prefWidth="216.0" text="&lt; Back To Manage Tags" textFill="#6e6e6e">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+         <effect>
+            <DropShadow color="#949494" height="27.22" radius="13.11" width="27.22" />
+         </effect>
+      </JFXButton>
+      <Circle fill="#aeaeae" layoutX="107.0" layoutY="95.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fill="#6b6a6a" layoutX="140.0" layoutY="95.0" radius="12.0" stroke="#141414" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fill="#aeaeae" layoutX="173.0" layoutY="95.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Label layoutX="95.0" layoutY="115.0" text="Add Tag" textFill="#6f6e6e">
+         <font>
+            <Font name="Arial Bold" size="40.0" />
+         </font>
+      </Label>
+      <Circle fill="#cdcdcd" layoutX="95.0" layoutY="712.0" opacity="0.34" radius="108.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fill="#cdcdcd" layoutX="161.0" layoutY="836.0" opacity="0.47" radius="74.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fill="#cdcdcd" layoutX="1062.0" layoutY="65.0" opacity="0.34" radius="108.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fill="#cdcdcd" layoutX="1162.0" layoutY="162.0" opacity="0.47" radius="74.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Label layoutX="982.0" layoutY="45.0" text="Resource" textFill="#808080">
+         <font>
+            <Font name="Calibri Bold" size="35.0" />
+         </font>
+      </Label>
+      <Label layoutX="982.0" layoutY="87.0" text="Management" textFill="#808080">
+         <font>
+            <Font name="Calibri Bold" size="35.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="711.0" layoutY="802.0" onAction="#clearBtnPressed" prefHeight="58.0" prefWidth="196.0" style="-fx-border-color: #3b0da7; -fx-border-width: 3px; -fx-border-radius: 10;" text="Clear" textFill="#3b0da7">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font>
+         <effect>
+            <DropShadow color="#949494" height="27.22" radius="13.11" width="27.22" />
+         </effect>
+      </JFXButton>
+      <JFXButton layoutX="934.0" layoutY="802.0" onAction="#saveBtnPressed" prefHeight="58.0" prefWidth="216.0" style="-fx-border-color: #199308; -fx-border-width: 3px; -fx-border-radius: 10;" text="Save" textFill="#199308">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font>
+         <effect>
+            <DropShadow color="#949494" height="27.22" radius="13.11" width="27.22" />
+         </effect>
+      </JFXButton>
+      <AnchorPane layoutX="294.0" layoutY="231.0" prefHeight="472.0" prefWidth="394.0" style="-fx-background-color: white; -fx-background-radius: 40; -fx-border-color: #6f6e6e; -fx-border-width: 3; -fx-border-radius: 40;">
+         <effect>
+            <DropShadow color="#cdcdcd" height="48.21" radius="27.1025" spread="0.6" width="62.2" />
+         </effect>
+         <children>
+            <JFXTextField fx:id="txtTagName" focusColor="#8a8a8a" labelFloat="true" layoutX="47.0" layoutY="123.0" prefHeight="31.0" prefWidth="300.0" promptText="Tag Name" />
+            <JFXTextField fx:id="txtTagCode" focusColor="#8a8a8a" labelFloat="true" layoutX="47.0" layoutY="211.0" prefHeight="31.0" prefWidth="300.0" promptText="Tag Code" />
+            <JFXComboBox fx:id="comboRelatedTag" focusColor="#7c7c7c" labelFloat="true" layoutX="47.0" layoutY="308.0" prefHeight="31.0" prefWidth="300.0" promptText="Related Tag" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="errLbl" layoutX="719.0" layoutY="437.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
